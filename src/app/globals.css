@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0c;
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom receipt jagged edges */
+.receipt-paper {
+  background-color: #faf8f5;
+  color: #1a1a1a;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.receipt-jagged-bottom {
+  background: linear-gradient(135deg, transparent 75%, #faf8f5 75%),
+              linear-gradient(225deg, transparent 75%, #faf8f5 75%);
+  background-size: 16px 16px;
+  background-repeat: repeat-x;
+  height: 16px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 35px -5px rgba(255, 0, 0, 0.45);
+}
+
+.glow-subtle {
+  box-shadow: 0 0 50px -10px rgba(255, 50, 50, 0.15);
+}
+
